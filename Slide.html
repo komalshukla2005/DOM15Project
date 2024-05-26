@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Slide Bar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: wheat;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            overflow: hidden;
+        }
+
+        .slide {
+            position: relative;
+            height: 35rem;
+            width: 80rem;
+            /* border: 2px solid green; */
+            border-radius:10px;
+        }
+
+        .slide .slide-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .slide img {
+            height: 100%;
+            width: 100%;
+            border-radius:10px;
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 2.5rem;
+        }
+
+        .btns {
+            display: flex;
+            position: absolute;
+            margin-top: 2rem;
+            gap:1rem;
+            margin-left: 35rem;
+        }
+
+        button {
+            text-decoration: none;
+            font-size: 2rem;
+            border: none;
+          
+        } 
+        button:hover {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slide">
+            <div class="slide-item">
+                <div class="slide-number">1</div>
+                <img src="https://static.wixstatic.com/media/4a5235_68a4a3fd32d046b98f0b8904c64d7e3b~mv2.png/v1/fill/w_924,h_858,al_c,q_90,enc_auto/4a5235_68a4a3fd32d046b98f0b8904c64d7e3b~mv2.png"
+                    alt="">
+            </div>
+            <div class="slide-item">
+                <div class="slide-number">2</div>
+                <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg" alt="">
+            </div>
+            <div class="slide-item">
+                <div class="slide-number">3</div>
+                <img src="https://static.vecteezy.com/system/resources/previews/025/284/015/non_2x/close-up-growing-beautiful-forest-in-glass-ball-and-flying-butterflies-in-nature-outdoors-spring-season-concept-generative-ai-photo.jpg"
+                    alt="">
+            </div>
+            <div class="slide-item">
+                <div class="slide-number">4</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg/800px-Altja_j%C3%B5gi_Lahemaal.jpg"
+                    alt="">
+            </div>
+            <div class="slide-item">
+                <div class="slide-number">5</div>
+                <img src="https://t3.ftcdn.net/jpg/02/70/35/00/360_F_270350073_WO6yQAdptEnAhYKM5GuA9035wbRnVJSr.jpg"
+                    alt="">
+            </div>
+            <div class="slide-item">
+                <div class="slide-number">6</div>
+                <img src="https://img.freepik.com/premium-photo/nature-wallpaper-beautiful-nature-wallpaper-4k-nature-wallpapers-hd-nature-wallpaper-green-nature_722194-205.jpg"
+                    alt="">
+            </div>
+            <div class="slide-item">
+                <div class="slide-number">7</div>
+                <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2ZsMjMxNDY4ODE2NTQtaW1hZ2Uta295NWoyeG4uanBn.jpg"
+                    alt="">
+            </div>
+        </div>
+        <div class="btns">
+            <button class="Previous">Previous</button>
+            <button class="next">Next</button>
+        </div>
+    </div>
+
+    <script src="slide.js"></script>
+</body>
+
+</html>

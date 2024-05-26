@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('https://miro.medium.com/v2/resize:fit:1400/1*d_03yjIuhWxTGNwpVYlMhQ.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box h1 {
+            color: black;
+            font-size: 3.5rem;
+            margin-top: 5rem;
+        }
+
+        .box {
+            margin-top: 25rem;
+            height: 20rem;
+            width: 40rem;
+            border-radius: 9px;
+            background-color: white;
+            text-align: center;
+            justify-content: center;
+            letter-spacing: 0.3rem;
+            font-weight: 900;
+
+        }
+
+        .btn {
+            cursor: pointer;
+            margin-top: 2rem;
+            padding: 10px 30px 10px 30px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            word-spacing: 0.4rem;
+            width: 14rem;
+            background-color: rgb(60, 185, 234);
+            letter-spacing: 0.3rem;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: rgb(60, 185, 234);
+            border: 1px solid red;
+            cursor: pointer;
+        }
+
+        .box2 {
+            height: 23rem;
+            width: 40rem;
+            border: 2px solid black;
+            background-color: white;
+            margin-top: 25rem;
+            border-radius: 10px;
+            margin-left: 2rem;
+            font-size: 3rem;
+            padding: 0.3rem;
+            text-align: center;
+            justify-content: center;
+            border: none;
+            display: none;
+            /* display: grid; */
+            place-items: center;
+            position: relative;
+        }
+
+        i {
+            /* margin-left: 35rem; */
+            color: red;
+            cursor: pointer;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            background: transparent;
+            border-color: transparent;
+        }
+        i:hover {
+            font-size:3rem;
+            transition: font-size 1.3s ease-in-out;
+        }
+
+        .box2 h1 {
+            font-size: 2rem;
+            margin-top:11rem;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Modal Project</h1>
+        <button class="btn">OPEN MODAL </button>
+    </div>
+    <div class="box2">
+        <i class="fa-solid fa-xmark"></i>
+        <h1>Modal Content</h1>
+    </div>
+    <script>
+        let btn = document.querySelector('.btn')
+        let box1 = document.querySelector('.box')
+        let remove = document.querySelector('.box2 i')
+        let box = document.querySelector('.box2')
+        remove.addEventListener("click", function () {
+            box.style.display = "none"
+            box1.style.display = "block"
+        })
+        btn.addEventListener("click", function () {
+            box1.style.display = "none"
+            box.style.display = "block"
+            document.body.style.backgroundColor="transparent"
+        })
+    </script>
+</body>
+
+</html>

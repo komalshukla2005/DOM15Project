@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: whitesmoke;
+        }
+        main{
+           margin-top:20rem;
+           
+        }
+        .firstmain{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:2rem;
+        }
+        .secondmain{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:4rem;
+        }
+        .thirdmain{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+        }
+        .btn{
+            padding:0.4rem;
+            cursor: pointer;
+            width: 9rem;
+            background-color: white;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="firstmain">
+            <h1>Counter</h1>
+        </div>
+        <div class="secondmain">
+            <h2>0</h2>
+        </div>
+        <div class="thirdmain">
+            <button type="button" class="btn" id="b1" onclick="">decrease button</button>
+            <button type="button" class="btn" id="b2" onclick="">Reset button</button>
+            <button type="button" class="btn" id="b3" onclick="">Increase button</button>
+        </div>
+    </main>
+    <script src="Counter.js"></script>
+</body>
+</html>

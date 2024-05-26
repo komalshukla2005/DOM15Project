@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Time</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/025/117/619/non_2x/hand-pointing-to-midnight-alarm-clock-rings-generated-by-ai-free-photo.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* .imagebox{
+            height:30rem;
+            width: 45rem; */
+        /* border: 3px solid red; */
+        /* margin-left:5rem;
+            margin-top:5rem; */
+        /* padding:0.3rem; */
+        /* }
+        .imagebox img{
+            height:29.7rem;
+            width: 44.5rem;
+        } */
+        .container {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cols {
+            width: 1000px;
+            margin-top: 2rem;
+            display: flex;
+            text-align: center;
+            gap: 2rem;
+            margin-left: 38rem;
+        }
+        .first{
+            background-color: white;
+        }
+        input {
+            display: block;
+            height: 5rem;
+            width: 8rem;
+            border: none;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        label {
+            font-size: 2rem;
+            color:black;
+        }
+
+        h1 {
+            margin-top: 15rem;
+            margin-left: 40rem;
+            color: white;
+            word-spacing: 1rem;
+            /* display: none; */
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div class="imagebox">
+            <img src="https://bl-i.thgim.com/public/incoming/fk5hrs/article67097604.ece/alternates/FREE_1200/MacBookAir%2015inch_5.JPG" alt="">
+        </div> -->
+        <h1> EndDate :June 4, 2024 22:49:00</h1>
+        <div class="cols">
+            <div class="first">
+                <input type="text" readonly value="0">
+                <label for="">Days</label>
+            </div>
+            <div class="first">
+                <input type="text" readonly value="0">
+                <label for="">Hours</label>
+            </div>
+            <div class="first">
+                <input type="text" readonly value="0">
+                <label for="">Minutes</label>
+            </div>
+            <div class="first">
+                <input type="text" readonly value="0">
+                <label for="">Seconds</label>
+            </div>
+        </div>
+    </div>
+    <script>
+        let inputs = document.querySelectorAll('input');
+        let endDate = new Date('June 4, 2024 22:49:00');
+        function clock() {
+            const today = new Date();
+            let difference = endDate - today;
+            let days = Math.floor(difference / (1000 * 3600 * 24));
+            if (days < 0) {
+                days = 0;
+            }
+
+            let hours = Math.floor((difference % (1000 * 3600 * 24)) / (1000 * 3600));
+            let minutes = Math.floor((difference % (1000 * 3600)) / (1000 * 60));
+            let seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            inputs[0].value = days;
+            inputs[1].value = hours;
+            inputs[2].value = minutes;
+            inputs[3].value = seconds;
+        }
+
+        clock();
+        setInterval(clock, 1000);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- function clock() {
+    const today = new Date();
+    let difference = (endDate - today) / 1000; // Difference in seconds
+
+    let days = Math.floor(difference / (3600 * 24));
+    let hours = Math.floor((difference % (3600 * 24)) / 3600);
+    let minutes = Math.floor((difference % 3600) / 60);
+    let seconds = Math.floor(difference % 60);
+
+    inputs[0].value = days;
+    inputs[1].value = hours;
+    inputs[2].value = minutes;
+    inputs[3].value = seconds;
+} -->

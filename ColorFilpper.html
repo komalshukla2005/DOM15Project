@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper Dom Project</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F1f5f8;
+        }
+        .nav {
+            height: 3rem;
+            /* border: 2px solid red; */
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .nav ul {
+            display: flex;
+            gap: 1.5rem;
+            padding: 0.3rem;
+            font-size: 1.4rem;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .leftside {
+            margin-left: 26rem;
+        }
+
+        .start {
+            margin-left: 40rem;
+            color: rgb(19, 164, 221);
+        }
+
+        .container {
+            /* border: 2px solid red;   */
+            /* margin-top: 2rem; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .colorbox {
+            height: 5rem;
+            width: 30rem;
+            margin-top: 20rem;
+            background-color: black;
+            color: white;
+            border-radius: 7px;
+            padding: 1rem;
+            font-size:2.2rem;
+        }
+
+        #btn {
+            margin-left: 53rem;
+            text-align: center;
+            width: 10rem;
+            padding: 0.9rem;
+            border-radius: 5px;
+            margin-top: 2rem;
+            border: 2px solid black;
+            color: black;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.50s ease;
+            cursor: pointer;
+        }
+
+        #btn:hover {
+            background-color: black;
+            color: white;
+
+        }
+
+        .hit:hover {
+            color: rgb(19, 164, 221);
+        }
+
+        .me:hover {
+            color: rgb(19, 164, 221);
+        }
+        .mainbox{
+            height: 95vh;
+        }
+        .hit{
+            text-decoration: none;
+        }
+        span{
+            color: rgb(19, 164, 221);
+
+        }
+        a{
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="nav">
+            <ul>
+                <li class="start">Color Flipper</li>
+                <li class="leftside hit">Simple</li>
+                <a href="#" class="hit">Hex</a>
+            </ul>
+        </div>
+        <div class="mainbox">
+            <div class="container">
+                <div class="colorbox">Background-Color : <span>'#F1f5f8'</span></div>
+            </div>
+            <button id="btn" type="button">CLICK ME</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

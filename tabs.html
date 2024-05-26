@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .first-text{
+            text-align: center;
+            margin-top: 3rem;
+
+        }
+        .p1{
+            text-align: center;
+            font-size:1.3rem;
+        }
+        .pic{
+            height:20rem;
+            width:35rem;
+            /* border: 2px solid red; */
+            background-image: url('https://vannilla-js-basic-project-11-tabs.netlify.app/hero-bcg.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+        }
+        .text-box{
+            height:22rem;
+            width:40rem;
+            /* border: 2px solid red; */
+            background-color: rgb(248, 250, 251);
+            border-radius: 5px;
+        }
+        .boxes{
+            display: flex;
+            margin-left: 20rem;
+            margin-top: 10rem;
+            gap: 2rem;
+            
+        }
+        .b1{
+            display: flex;
+            justify-content:space-around;
+            /* border: 2px solid yellow; */
+            border-radius: 10px;
+            padding: 0.3rem;
+            background-color:rgb(209, 234, 244);
+        }
+        .inner-text{
+            padding: 1rem;
+            font-size:1.1rem;
+        }
+        .history{
+            height:17rem;
+            /* border: 2px solid blue; */
+            padding: 1rem;
+            word-spacing: 0.3rem;
+            overflow: auto;
+        }
+        .vision{
+            height:20rem;
+            /* border: 2px solid blue; */
+            padding: 1rem;
+            word-spacing: 0.3rem;
+            overflow: auto;
+            display: none;
+        }
+        ul{
+            margin-top:1rem;
+        }
+        li{
+            list-style: none;
+        }
+        .goals{
+            height:15rem;
+            /* border: 2px solid blue; */
+            padding: 1rem;
+            word-spacing: 0.3rem;
+            /* overflow: auto; */
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="first-text">About</h1>
+    <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, aperiam!</p>
+    <div class="container">
+        <div class="boxes">
+            <div class="pic"></div>
+            <div class="text-box">
+                <div class="b1">
+                    <h2 onclick="showContent('history')">History</h2>
+                    <h2 onclick="showContent('vision')">Vision</h2>
+                    <h2 onclick="showContent('goals')">Goals</h2>
+                </div>
+                
+                <div class="inner-text">
+                    <div class="history">
+                        <h1>history</h1>
+                        <p>I'm baby wolf pickled schlitz try-hard normcore marfa man bun mumblecore vice pop-up XOXO lomo kombucha glossier bicycle rights. Umami kinfolk salvia jean shorts offal venmo. Knausgaard tilde try-hard, woke fixie banjo man bun. Small batch tumeric mustache tbh wayfarers 8-bit shaman chartreuse tacos. Viral direct trade hoodie ugh chambray, craft beer pork belly flannel tacos single-origin coffee art party migas plaid pop-up.</p>
+                    </div>
+                    <div class="vision">
+                        <h1>Vision</h1>
+                        <p>Man bun PBR&B keytar copper mug prism, hell of helvetica. Synth crucifix offal deep v hella biodiesel. Church-key listicle polaroid put a bird on it chillwave palo santo enamel pin, tattooed meggings franzen la croix cray. Retro yr aesthetic four loko tbh helvetica air plant, neutra palo santo tofu mumblecore. Hoodie bushwick pour-over jean shorts chartreuse shabby chic. Roof party hammock master cleanse pop-up truffaut, bicycle rights skateboard affogato readymade sustainable deep v live-edge schlitz narwhal.</p>
+                        <ul>
+                            <li>list items</li>
+                            <li>list items</li>
+                            <li>list items</li>
+                        </ul>
+                    </div>
+                    <div class="goals">
+                        <h1>Goals</h1>
+                        <p>Chambray authentic truffaut, kickstarter brunch taxidermy vape heirloom four dollar toast raclette shoreditch church-key. Poutine etsy tote bag, cred fingerstache leggings cornhole everyday carry blog gastropub. Brunch biodiesel sartorial mlkshk swag, mixtape hashtag marfa readymade direct trade man braid cold-pressed roof party. Small batch adaptogen coloring book heirloom. Letterpress food truck hammock literally hell of wolf beard adaptogen everyday carry. Dreamcatcher pitchfork yuccie, banh mi salvia venmo photo booth quinoa chicharrones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showContent(tabName) {
+            // Hide all content first
+            var contents = document.querySelectorAll('.inner-text > div');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            // Show the selected content
+            document.querySelector('.' + tabName).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <style>
+        /* Your CSS styles */
+    </style>
+</head>
+<body>
+    <h1>About</h1>
+    <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, aperiam!</p>
+    <div class="container">
+        <div class="boxes">
+            <div class="pic"></div>
+            <div class="text-box">
+                <div class="b1">
+                    <h2 onclick="showContent('history')">History</h2>
+                    <h2 onclick="showContent('vision')">Vision</h2>
+                    <h2 onclick="showContent('goals')">Goals</h2>
+                </div>
+                
+                <div class="inner-text">
+                    <div class="history">
+                        <h1>history</h1>
+                        <p>I'm baby wolf pickled schlitz try-hard normcore marfa man bun mumblecore vice pop-up XOXO lomo kombucha glossier bicycle rights. Umami kinfolk salvia jean shorts offal venmo. Knausgaard tilde try-hard, woke fixie banjo man bun. Small batch tumeric mustache tbh wayfarers 8-bit shaman chartreuse tacos. Viral direct trade hoodie ugh chambray, craft beer pork belly flannel tacos single-origin coffee art party migas plaid pop-up.</p>
+                    </div>
+                    <div class="vision" style="display: none;">
+                        <h1>Vision</h1>
+                        <p>Man bun PBR&B keytar copper mug prism, hell of helvetica. Synth crucifix offal deep v hella biodiesel. Church-key listicle polaroid put a bird on it chillwave palo santo enamel pin, tattooed meggings franzen la croix cray. Retro yr aesthetic four loko tbh helvetica air plant, neutra palo santo tofu mumblecore. Hoodie bushwick pour-over jean shorts chartreuse shabby chic. Roof party hammock master cleanse pop-up truffaut, bicycle rights skateboard affogato readymade sustainable deep v live-edge schlitz narwhal.</p>
+                        <ul>
+                            <li>list items</li>
+                            <li>list items</li>
+                            <li>list items</li>
+                        </ul>
+                    </div>
+                    <div class="goals" style="display: none;">
+                        <h1>Goals</h1>
+                        <p>Chambray authentic truffaut, kickstarter brunch taxidermy vape heirloom four dollar toast raclette shoreditch church-key. Poutine etsy tote bag, cred fingerstache leggings cornhole everyday carry blog gastropub. Brunch biodiesel sartorial mlkshk swag, mixtape hashtag marfa readymade direct trade man braid cold-pressed roof party. Small batch adaptogen coloring book heirloom. Letterpress food truck hammock literally hell of wolf beard adaptogen everyday carry. Dreamcatcher pitchfork yuccie, banh mi salvia venmo photo booth quinoa chicharrones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(tabName) {
+            // Hide all content first
+            var contents = document.querySelectorAll('.inner-text > div');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            // Show the selected content
+            document.querySelector('.' + tabName).style.display = 'block';
+        }
+    </script>
+</body>
+</html> -->

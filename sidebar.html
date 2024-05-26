@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .nav-togle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2.9rem;
+        }
+        .nav-togle i{
+            color:#49a6e9;;
+        }
+        ul {
+            margin-top: 2rem;
+            font-size: 1.4rem;
+        }
+
+        ul li {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #617d98;
+            display: block;
+            padding: 1rem;
+            cursor: pointer;
+            transform: none;
+            transition: all 0.3s linear 0s;
+        }
+
+
+        ul li a:hover,
+        ul li a:hover+li a {
+            background-color: #49a6e9;
+            cursor: pointer;
+            color: black;
+        }
+
+        .sidebar {
+            height: 100vh;
+            background-color: whitesmoke;
+            width: 400px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            transform: translate(-100%);
+            transition: transform 0.5s ease-in-out;
+        }
+        .show-sidebar{
+            transform: translate(0%) !important;
+        }
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        .heading i {
+            margin-top: 0.3rem;
+            font-size: 2.3rem;
+        }
+
+        .icons {
+            display: flex;
+            gap: 1rem;
+            font-size: 1.4rem;
+            margin-top: 30rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span {
+            color: #49a6e9;
+        }
+
+        .heading i {
+            color: red;
+        }
+
+        .icons i {
+            color: #49a6e9;
+        }
+
+        .links li {
+            color: #49a6e9;
+        }
+
+        .fa-xmark {
+            display: inline-block;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .fa-xmark:hover {
+            transform: rotate(360deg);
+         
+        }
+
+        @keyframes pulsate {
+
+            0%,
+            100% {
+                font-size: 29px;
+                
+            }
+
+            50% {
+                font-size: 40px;
+            }
+        }
+        .fa-bars {
+            display: inline-block;
+            animation: pulsate 5s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-togle">
+        <i class="fa fa-bars"></i>
+    </div>
+    <div class="sidebar">
+        <div class="heading">
+            <h1>Coding <span>Addict</span></h1>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <ul class="links">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div class="icons">
+            <a href="https://x.com/">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://x.com/">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://x.com/">
+                <i class="fa-brands fa-behance"></i>
+            </a>
+            <a href="https://x.com/">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://x.com/">
+                <i class="fa-solid fa-gem"></i>
+            </a>
+        </div>
+    </div>
+    <script>    
+    let sidebar = document.querySelector('.sidebar');
+        let btn = document.querySelector('.nav-togle i');
+        let closeBtn = document.querySelector('.sidebar .fa-xmark');
+        btn.addEventListener("click", function() {
+            sidebar.classList.toggle('show-sidebar');
+        });
+        closeBtn.addEventListener("click", function() {
+            sidebar.classList.remove('show-sidebar');
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

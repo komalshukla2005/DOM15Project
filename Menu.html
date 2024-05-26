@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Project</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color:white;
+            height: 149vh;
+        }
+        h1{
+            font-size: 3rem;
+        }
+        .hr{
+            margin-top:0.5rem;
+            margin-left:56rem;
+            width:6rem;
+            border:2px solid #c59d5f;
+        }
+        .headind{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:6rem;
+        }
+        .buttons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:2rem;
+            gap: 2rem;
+        }
+        button{
+            padding:0.5rem;
+            font-size:1rem;
+            border-radius:10px;
+            color: #c59d5f;
+            border:2px solid #c59d5f;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #c59d5f;
+            color: white;
+        }
+        .b1{
+            width:5rem;
+        }
+        .b2{
+            width:9rem;
+        }
+        .b3{
+            width:7rem;
+          
+        }
+        .b4{
+            width:7rem;
+          
+        }
+        .b5{
+            width:6rem;
+          
+        }
+        .startmenu{
+            height:110vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            color:#102a42;
+            background-color: #ffffff;
+            /* border: 2px solid red; */
+            gap:2rem;
+            flex-wrap: wrap;
+        }
+        .fristmenu{
+            display: flex;
+            gap: 2rem;
+        }
+        .box1{
+            height:180px;
+            width:245px;
+            border:3px solid #c59d5f;
+            border-radius:8px;
+        }
+        .box1 img{
+            height:174px;
+            width:239px;
+            border-radius:5px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .box2{
+            height:180px;
+            width:325px;
+            /* border:1px solid green; */
+            /* padding:14px 5px ;   */
+        }
+        .box2-child-box{
+            display: flex;
+            justify-content: space-between;
+            font-size:1.4rem;
+                                 
+        }
+        .text-box{
+            padding:16px 0 0 0;
+            font-size: 1.2rem;
+            font-weight:300;
+        }
+        hr{
+            border: 1px dotted black;
+            /* margin-top:1rem; */
+        }
+        .change{
+            color: #c59d5f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="headind">
+            <h1>Our Menu</h1>
+        </div>
+        <div class="hr"></div>
+        <div class="buttons">
+            <button class="b1" type="button" data-category="all">All</button>
+            <button class="b2" type="button" data-category="breakfast">Breakfast</button>
+            <button class="b3" type="button" data-category="lunch">Lunch</button>
+            <button class="b4" type="button" data-category="shakes">Shakes</button>
+            <button class="b5" type="button" data-category="dinner">Dinner</button>
+        </div>
+        </div>
+        <div class="startmenu" data-category="breakfast">
+            <div class="fristmenu" data-category="breakfast">
+                <div class="box1">
+                    <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-1.jpeg" alt="">
+                </div>
+                <div class="box2">
+                    <div class="box2-child-box">
+                        <p>Buttermilk Pancakes</p>
+                        <p class="change">$15.99</p>
+                    </div>
+                    <hr>
+                    <div class="text-box">
+                        <p>I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fristmenu" data-category="lunch">
+                <div class="box1">
+                    <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-2.jpeg" alt="">
+                </div>
+                <div class="box2">
+                    <div class="box2-child-box">
+                        <p>Diner Double</p>
+                        <p class="change">$13.99</p>
+                    </div>
+                    <hr>
+                    <div class="text-box">
+                        <p>vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="fristmenu" data-category="shakes">
+                <div class="box1">
+                    <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-3.jpeg".alt="">
+                </div>
+                <div class="box2">
+                    <div class="box2-child-box">
+                        <p>Godzilla Milkshake</p>
+                        <p class="change">$6.99</p>
+                    </div>
+                    <hr>
+                    <div class="text-box">
+                        <p>ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fristmenu" data-category="breakfast">
+                <div class="box1">
+                    <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-4.jpeg" alt="">
+                </div>
+                <div class="box2">
+                    <div class="box2-child-box" data-category="breakfast">
+                        <p>Country Delight
+                        </p>
+                        <p class="change">$20.99</p>
+                    </div>
+                    <hr>
+                    <div class="text-box">
+                        <p>Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut,</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fristmenu" data-category="lunch">
+                <div class="box1">
+                    <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-5.jpeg" alt="">
+                </div>
+                <div class="box2">
+                    <div class="box2-child-box">
+                        <p>Egg Attack</p>
+                        <p class="change">$22.99</p>
+                    </div>
+                    <hr>
+                    <div class="text-box">
+                        <p>franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fristmenu" data-category="shakes">
+                <div class="box1">
+                    <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-6.jpeg" alt="">
+                </div>
+                <div class="box2">
+                    <div class="box2-child-box">
+                        <p>Oreo Dream</p>
+                        <p class="change">$18.99
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="text-box">
+                        <p>Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="fristmenu" data-category="breakfast">
+                <div class="box1">
+                    <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-7.jpeg" alt="">
+                </div>
+                <div class="box2">
+                    <div class="box2-child-box">
+                        <p>Bacon Overflow</p>
+                        <p class="change">$8.99</p>
+                    </div>
+                    <hr>
+                    <div class="text-box">
+                        <p>carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fristmenu" data-category="lunch">
+                <div class="box1">
+                    <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-8.jpeg" alt="">
+                </div>
+                <div class="box2">
+                    <div class="box2-child-box">
+                        <p>American Classic
+                        </p>
+                        <p class="change">$12.99
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="text-box">
+                        <p>on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fristmenu" data-category="shakes">
+                <div class="box1">
+                    <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-9.jpeg" alt="">
+                </div>
+                <div class="box2">
+                    <div class="box2-child-box">
+                        <p>Quarantine Buddy</p>
+                        <p class="change">$16.99</p>
+                    </div>
+                    <hr>
+                    <div class="text-box">
+                        <p>skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="fristmenu"data-category="dinner">
+                <div class="box1">
+                    <img src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-10.jpeg" alt="">
+                </div>
+                <div class="box2">
+                    <div class="box2-child-box">
+                        <p>Steak Dinner</p>
+                        <p class="change">$39.99</p>
+                    </div>
+                    <hr>
+                    <div class="text-box">
+                        <p>skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+</body>
+</html>

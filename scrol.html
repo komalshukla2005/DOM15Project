@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .home {
+            height: 1100px;
+            width: 100%;
+            border: 2px solid transparent;
+            background-image: url("https://media.istockphoto.com/id/1197909383/photo/vintage-retro-toned-palms-on-rode-drive-beverly-hills-los-angeles.jpg?s=2048x2048&w=is&k=20&c=26sGINytgNvANPqb1koy2vR6lGpU5WMIENKV2hSODT4=");
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            position: relative;
+        }
+        nav {
+            width: 100%;
+            height: 6rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.8rem;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            position: fixed;
+            z-index:10;
+        }
+
+        .about {
+            height: 900px;
+            width: 100%;
+            border: 2px solid transparent;
+            background-color: rgb(226, 236, 241);
+            text-align: center;
+            position: relative;
+            z-index:5;
+            padding-top:6rem;
+        }
+
+        .service {
+            height: 900px;
+            width: 100%;
+            text-align: center;
+            background-color: whitesmoke;
+            position: relative;
+            z-index:7;
+            padding-top:6rem;
+        }
+
+        .tours {
+            text-align: center;
+            height: 900px;
+            width: 100%;
+            background-color: rgb(226, 236, 241);
+            position: relative;
+            z-index:8;
+            padding-top:6rem;
+        }
+
+        footer {
+            height: 12rem;
+            background-color: #102a42;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            font-size: 1.4rem;
+        }
+
+        ul {
+            display: flex;
+            gap: 2rem;
+            margin-right: 20rem;
+        }
+
+        ul li {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        ul li a {
+            text-decoration: none;
+            /* color: white; */
+            color: black;
+        }
+
+        .logo img {
+            height: 3rem;
+            margin-left: 25rem;
+        }
+
+        .center {
+            margin-top: 35rem;
+            text-align: center;
+            justify-content: center;
+            /* font-weight: 800; */
+            color: white;
+        }
+
+        .center h1 {
+            font-size: 3rem;
+            margin: 1rem;
+            word-spacing: 0.3rem;
+        }
+
+        .center p {
+            font-size: 1.4rem;
+            word-spacing: 0.3rem;
+        }
+
+        .center button {
+            margin-top: 1rem;
+            padding: 0.5rem 1.6rem;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid white;
+            background: none;
+            color: aliceblue;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .center button:hover {
+            background-color: white;
+            border: 2px solid transparent;
+            color: #102a42;
+        }
+
+        span {
+            color: #40cfd4;
+        }
+
+        .sticky {
+            background-color: white;
+            color: #102a42;
+            border-bottom: 2px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="home">
+            <nav>
+                <div class="logo">
+                    <img src="logo.svg" alt="">
+                </div>
+                <ul>
+                    <li class="one"><a href="#">Home</a></li>
+                    <li class="two"><a href="#">About</a></li>
+                    <li class="three"><a href="#">Services</a></li>
+                    <li class="froth"><a href="#">Tours</a></li>
+                </ul>
+            </nav>
+            <div class="center">
+                <h1>SCROLL PROJECT</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eos neque sunt in? Id,<br>
+                    necessitatibus quos quisquam distinctio laudantium fugiat?</p>
+                <button class="my">EXPLORE TOURS</button>
+            </div>
+        </div>
+        <div class="about">
+            <h1>About <span>US</span></h1>
+        </div>
+        <div class="service">
+            <h1>OUR <span>SERVICES</span> </h1>
+        </div>
+        <div class="tours">
+            <h1>FEATURED <span>TOURS</span></h1>
+        </div>
+        <footer>
+            <p>Copyright © Backroads Travel Tours Company 2024. All Rights Reserved</p>
+        </footer>
+    </div>
+    <script>
+        let links = document.querySelectorAll('ul li a');
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            var navbar = document.querySelector("nav");
+            if (window.scrollY > 80) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            links.forEach(link => {
+                link.style.color = 'black'; 
+                link.addEventListener('mouseover', function () {
+                    this.style.color = '#40cfd4'; 
+                });
+                link.addEventListener('mouseout', function () {
+                    this.style.color = '#102a42'; 
+                });
+            });
+        }
+        let btn = document.querySelector('.two a');
+        let aboutSection = document.querySelector('.about');
+        btn.addEventListener("click", function(event) {
+            event.preventDefault(); 
+            aboutSection.scrollIntoView({ behavior: "smooth" }); 
+            console.log("clicked on about");
+        });
+        let btn2=document.querySelector('.three a');
+        let services=document.querySelector('.service')
+        btn2.addEventListener("click",function(event){
+            event.preventDefault();
+            services.scrollIntoView({behavior:"smooth"});
+        })
+        let btn3=document.querySelector('.froth a');
+        let tours=document.querySelector('.tours')
+        btn3.addEventListener("click",function(event){
+            event.preventDefault();
+            tours.scrollIntoView({behavior:"smooth"});
+        })
+        let mybtn=document.querySelector('.my')
+        mybtn.addEventListener("click",function(event){
+            event.preventDefault();
+            tours.scrollIntoView({behavior:"smooth"});
+            console.log("Click me")
+        })
+        let btn4=document.querySelector('.one a')
+        let home=document.querySelector('.home')
+        btn4.addEventListener("click",function(event){
+            home.scrollIntoView({behavior:"smooth"})
+        })
+    </script>
+
+</body>
+
+</html>

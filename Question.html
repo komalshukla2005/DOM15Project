@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answer Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color:rgb(236, 244, 248);
+        }
+
+        h1 {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 5rem;
+            font-family: "Sevillana", cursive;
+            font-size: 4rem;
+            color: #e8cb28;
+        }
+
+        .box1 {
+            /* border: 2px solid red; */
+            padding: 2rem;
+            width: 40rem;
+            border-radius: 10px;
+            margin-left: 37rem;
+            background-color: white;
+            color: rgb(93, 126, 138);
+            margin-top: 1.4rem;
+            position: relative; /* Added */
+        }
+
+        .question {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            word-spacing: 0.4rem;
+            letter-spacing: 0.1rem;
+
+        }
+        i{
+            transition: transform 1s;
+        }
+        i:hover{
+            transform: rotate(360deg);
+        }
+        .fa-solid {
+            border: 2px solid #e8cb28;
+            color: #e8cb28;
+        }
+
+        .my {
+            display: none;
+            position: absolute; 
+            top: 2rem; 
+            right: 2rem; 
+        }
+
+        hr {
+            margin-top: 1.5rem;
+            line-height: 2rem;
+        }
+
+        .answer {
+            margin-top: 1.5rem;
+            padding: 0.4rem;
+            word-spacing: 0.2rem;
+            letter-spacing: 0.1rem;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>General Questions</h1>
+    <div class="conatiner">
+        <div class="box1">
+            <div class="question">
+                <p>Do You Accept All Major Credit Cards?</p>
+                <i class="fa-solid fa-plus add"></i>
+                <i class="fa-solid fa-minus my"></i>
+            </div>
+            <hr>
+            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia
+                nemo doloribus quaerat, magni numquam repellat reprehenderit.</p>
+        </div>
+        <div class="box1">
+            <div class="question">
+                <p>Do You Accept All Major Credit Cards?</p>
+                <i class="fa-solid fa-plus add"></i>
+                <i class="fa-solid fa-minus my"></i>
+            </div>
+            <hr>
+            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia
+                nemo doloribus quaerat, magni numquam repellat reprehenderit.</p>
+        </div>
+        <div class="box1">
+            <div class="question">
+                <p>Do You Accept All Major Credit Cards?</p>
+                <i class="fa-solid fa-plus add"></i>
+                <i class="fa-solid fa-minus my"></i>
+            </div>
+            <hr>
+            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia
+                nemo doloribus quaerat, magni numquam repellat reprehenderit.</p>
+        </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    let btns = document.querySelectorAll('.question .add');
+    let myBtns = document.querySelectorAll('.question .my');
+    let ans = document.querySelectorAll('.answer');
+    btns.forEach(function(button, index) {
+        button.addEventListener("click", function() {
+            toggleAnswer(index);
+        });
+    });
+    myBtns.forEach(function(myButton, index) {
+        myButton.addEventListener("click", function() {
+            toggleAnswer(index);
+        });
+    });
+    function toggleAnswer(index) {
+        if (ans[index].style.display === 'block') {
+            ans[index].style.display = 'none';
+            btns[index].style.display = 'block';
+            myBtns[index].style.display = 'none'; 
+        } else {
+            hideAllAnswers();
+            ans[index].style.display = 'block';
+            btns[index].style.display = 'none';
+            myBtns[index].style.display = 'block';
+        }
+    }
+    function hideAllAnswers() {
+        ans.forEach(function(a, index) {
+            a.style.display = 'none';
+            btns[index].style.display = 'block';
+            myBtns[index].style.display = 'none'; 
+        });
+    }
+});
+
+
+    </script>
+</body>
+
+</html>
+
